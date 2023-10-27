@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CommunityFeedNextJS
 
-## Getting Started
+Bienvenue sur **CommunityFeedNextJS** ! Il s'agit d'une application web conçue pour afficher une liste de questions liées à ReactJS depuis Stack Overflow API.
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Cette application est construite avec Next.js et offre une interface simple pour visualiser les questions les plus récentes et les plus populaires sur ReactJS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Fonctionnalités principales
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **[Header](https://github.com/GuiFraV/CommunityFeedNextJS/blob/master/src/app/components/Header.js)** : Affiche le titre "Community Feed".
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **[Card](https://github.com/GuiFraV/CommunityFeedNextJS/blob/master/src/app/components/Card.js)** : Représente une question individuelle avec son titre, le nombre de vues et le nombre de réponses.
 
-## Learn More
+- **[Pagination](https://github.com/GuiFraV/CommunityFeedNextJS/blob/master/src/app/components/Pagination.js)** : Permet de naviguer entre les différentes pages de questions.
 
-To learn more about Next.js, take a look at the following resources:
+- **[Questions](https://github.com/GuiFraV/CommunityFeedNextJS/blob/master/src/app/questions/page.js)** : Affiche une liste de questions récupérées depuis l'API de Stack Overflow.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[QuestionDetail](https://github.com/GuiFraV/CommunityFeedNextJS/blob/master/src/app/questions/[id]/page.js)** : Affiche les détails d'une question spécifique lorsqu'on clique dessus.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Comment ça marche ?
 
-## Deploy on Vercel
+Lorsque vous accédez à l'application, elle récupère une liste de questions depuis l'API de Stack Overflow avec le tag "reactjs". Ces questions sont ensuite affichées sous forme de cartes. Vous pouvez cliquer sur une question pour voir ses détails ou utiliser la pagination pour naviguer entre les différentes pages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Conclusion
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**CommunityFeedNextJS** est une application simple mais efficace pour rester à jour avec les questions les plus récentes et les plus populaires sur ReactJS depuis Stack Overflow. N'hésitez pas à contribuer ou à donner vos retours !
