@@ -4,15 +4,14 @@ import styled from 'styled-components';
 import Card from '@/app/components/Card';
 
 const QuestionDetailContainer = styled.div`
-display: flex;
-justify-content: space-between;
-flex-direction: column;
-margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 5%;
 `;
 
-function QuestionDetail({params}) {
-    // const router = useRouter();
-    // const { id } = router.query;
+function QuestionDetail({ params }) {
+    const page  = 3
 
     const [loading, setLoading] = useState(true);
     const [question, setQuestion] = useState([]);

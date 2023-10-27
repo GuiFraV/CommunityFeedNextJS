@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import styled from "styled-components";
 import Link from 'next/link'
 import Card from '../components/Card';
+import Pagination from '../components/Pagination';
 
 const CardLink = styled.a`
     text-decoration: none;
@@ -19,14 +20,19 @@ function Questions(){
 
     const [loading, setLoading] = useState(true);
     const [questions, setQuestions] = useState([]);
+    const [hasMore, setHasMore] = useState(false)
+
+    const page = 3;
 
     useEffect(() => {
         async function fetchData(){
             const data = await fetch('https://api.stackexchange.com/2.2/questions?order=desc&sort=hot&tagged=reactjs&site=stackoverflow');
+            // const data = await fetch(`https://api.stackexchange.com/2.2/questions?${page ? `page=${page}&` : ''}order=desc&sort=hot&tagged=reactjs&site`);
             const result = await data.json();
 
             if(result){
                 setQuestions(result.items);
+                setHasMore(result.has_more)
                 setLoading(false)
             }
         }
@@ -59,6 +65,7 @@ function Questions(){
                         </CardLink>
                         </Link>
                     ))}
+                    <Pagination currentPage={parseInt(page) || 1} hasMore={hasMore} />
                 </div>
             )}
         </QuestionsContainer>
