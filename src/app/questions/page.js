@@ -1,3 +1,13 @@
+"use client"
+import styled from "styled-components";
+
+const QuestionsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: colum;
+    margin: 5%;
+`;
+
 function Questions(){
     return (
         <QuestionsContainer>
