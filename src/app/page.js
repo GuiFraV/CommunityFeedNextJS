@@ -1,9 +1,10 @@
-import Header from './components/Header';
+import Questions from "./questions/page";
+
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <Questions />
     </>
   )
 }
